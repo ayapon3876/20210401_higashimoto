@@ -1,49 +1,18 @@
 <template>
-  <div class="home flex">
-    <Card v-for="(data,index) in lists" :key="index" :city="data.city" />
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Card from "../components/Card";
-export default {
-  data() {
-    return {
-      lists: [
-        {
-          city: "sapporo"
-        },
-        {
-          city: "tokyo"
-        },
-        {
-          city: "nagoya"
-        },
-        {
-          city: "osaka"
-        },
-        {
-          city: "fukuoka"
-        },
-        {
-          city: "naha"
-        }
-      ]
-    };
-  },
-  components: {
-    Card
-  }
-};
-</script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
 
-<style scoped>
-body {
-  background: #eee;
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld
+  }
 }
-.flex {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-</style>
+</script>
